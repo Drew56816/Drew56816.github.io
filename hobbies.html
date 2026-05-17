@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>我的爱好 - 吴道贺的网站</title>
+    <style>
+        /* 全局样式与首页相同 */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            color: #333;
+        }
+
+        /* 导航栏 */
+        nav {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 20px;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #667eea;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 30px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #555;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover,
+        .nav-links a.active {
+            color: #667eea;
+        }
+
+        /* 主内容 */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 60px 20px;
+        }
+
+        .content-card {
+            background: white;
+            padding: 60px;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            animation: fadeInUp 0.8s ease-out;
+        }
+
+        h1 {
+            color: #667eea;
+            font-size: 2.5rem;
+            margin-bottom: 40px;
+            text-align: center;
+            font-weight: 600;
+        }
+
+        .hobbies-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+
+        .hobby-card {
+            background: #f8f9fa;
+            padding: 30px;
+            border-radius: 15px;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .hobby-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .hobby-icon {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            color: #667eea;
+        }
+
+        .hobby-card h3 {
+            margin-bottom: 15px;
+            color: #333;
+        }
+
+        .hobby-card p {
+            color: #666;
+            line-height: 1.6;
+        }
+
+        /* 动画 */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* 响应式 */
+        @media (max-width: 768px) {
+            .nav-links {
+                gap: 15px;
+            }
+            
+            .content-card {
+                padding: 40px 20px;
+            }
+            
+            h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav>
+        <div class="nav-container">
+            <div class="logo">吴道贺的网站</div>
+            <div class="nav-links">
+                <a href="index.html">首页</a>
+                <a href="about.html">关于我</a>
+                <a href="hobbies.html" class="active">我的爱好</a>
+                <a href="contact.html">联系我</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 主内容 -->
+    <div class="container">
+        <div class="content-card">
+            <h1>我的爱好</h1>
+            <div class="hobbies-grid">
+                <div class="hobby-card">
+                    <div class="hobby-icon">💻</div>
+                    <h3>编程</h3>
+                    <p>我喜欢学习编程，探索计算机的奥秘，创造属于自己的程序和网站。</p>
+                </div>
+                <div class="hobby-card">
+                    <div class="hobby-icon">📚</div>
+                    <h3>阅读</h3>
+                    <p>阅读各种书籍，尤其是科技和科幻类的，能够开阔我的视野。</p>
+                </div>
+                <div class="hobby-card">
+                    <div class="hobby-icon">🎮</div>
+                    <h3>游戏</h3>
+                    <p>闲暇时间喜欢玩一些策略类和冒险类游戏，放松心情。</p>
+                </div>
+                <div class="hobby-card">
+                    <div class="hobby-icon">🎵</div>
+                    <h3>音乐</h3>
+                    <p>喜欢听各种风格的音乐，音乐能够让我感到放松和愉悦。</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
